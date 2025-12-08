@@ -1,0 +1,10 @@
+@media(max-width:800px){
+    .video-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .dataUpdate{
+        width:100%;
+        
+    }
+}
