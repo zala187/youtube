@@ -10,7 +10,7 @@ const Video = () => {
     <div className='video-menu flex items-start px-10 gap-5'>
       <PlayVideo  videoId={videoId}/>
     
-      <Recommended className="dataUpdate" categoryId={categoryId}/>
+      <Recommended className="dataUpdate grid lg:grid-cols-2" categoryId={categoryId}/>
       
     </div>
   )

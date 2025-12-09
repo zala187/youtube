@@ -1,65 +1,47 @@
 import React from 'react'
 import "./Navbar.css"
 import logo from "../../assets/logo.png"
-import toggle from "../../assets/menu.png"
-import more from "../../assets/more.png"
-import notification from "../../assets/notification.png"
-import upload from "../../assets/upload.png"
-import jack from "../../assets/jack.png" 
-import game_icon from "../../assets/game_icon.png";
+
 
 import Feed from '../Feed/Feed'
 
-const Navbar = ({category,setCategory}) => {
+const Navbar = () => {
   return (
    
 <div className="flex">
-<nav class="fixed top-0 z-50 w-full bg-neutral-primary-soft border-b border-default">
-  <div class="px-3 py-3 lg:px-5 lg:pl-3">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center justify-start rtl:justify-end">
-        <button data-drawer-target="top-bar-sidebar" data-drawer-toggle="top-bar-sidebar" aria-controls="top-bar-sidebar" type="button" class="sm:hidden text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none">
-            <span class="sr-only">Open sidebar</span>
-            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+<nav className="fixed top-0 z-50 w-full bg-neutral-primary-soft border-b border-default">
+  <div className="px-3 py-3 lg:px-5 lg:pl-3">
+    <div className="flex items-center justify-between">
+      <div className="flex items-center justify-start rtl:justify-end">
+        <button data-drawer-target="top-bar-sidebar" data-drawer-toggle="top-bar-sidebar" aria-controls="top-bar-sidebar" type="button" className="sm:hidden text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none">
+            <span className="sr-only">Open sidebar</span>
+            <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h10"/>
    </svg>
          </button>
-        <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-          <img src={logo} class="h-6 me-3" alt="FlowBite Logo" />
-          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+          <img src={logo} className="h-8 me-3" alt="FlowBite Logo" />
+          <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
       </div>
-      <div class="flex items-center">
-          <div class="flex items-center ms-3">
+      <div className="flex items-center">
+          <div className="flex items-center ms-3">
             <div>
-              <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                <span class="sr-only">Open user menu</span>
-                <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo"/>
+              <button type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                <span className="sr-only">Open user menu</span>
+                <img className="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo"/>
               </button>
             </div>
-            <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="dropdown-user">
-              <div class="px-4 py-3 border-b border-default-medium" role="none">
-                <p class="text-sm font-medium text-heading" role="none">
+            <div className="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="dropdown-user">
+              <div className="px-4 py-3 border-b border-default-medium" role="none">
+                <p className="text-sm font-medium text-heading" role="none">
                   Neil Sims
                 </p>
-                <p class="text-sm text-body truncate" role="none">
+                <p className="text-sm text-body truncate" role="none">
                   neil.sims@flowbite.com
                 </p>
               </div>
-              <ul class="p-2 text-sm text-body font-medium" role="none">
-                <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Dashboard</a>
-                </li>
-                <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Settings</a>
-                </li>
-                <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Earnings</a>
-                </li>
-                <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Sign out</a>
-                </li>
-              </ul>
+             
             </div>
           </div>
         </div>
@@ -69,9 +51,7 @@ const Navbar = ({category,setCategory}) => {
 
 
 
-<div class="p-4 sm:ml-64">
-   <Feed/>
-   </div>
+
 </div>
 
   )
