@@ -72,7 +72,7 @@ const PlayVideo = ({ videoId }) => {
   };
 
   return (
-    <div className="playVideo-container w-300 mt-25">
+    <div className="playVideo-container w-full mt-25">
       <iframe
         src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
         frameBorder="0"
@@ -90,16 +90,18 @@ const PlayVideo = ({ videoId }) => {
         {moment(videoData?.snippet?.publishedAt || new Date()).fromNow()}
       </p>
 
-      <div className="flex items-center gap-4 mt-4">
+      <div className="flex items-center justify-between gap-4 mt-4">
+        <div className="flex items-center gap-3">
         <img
           src={videoData?.snippet?.thumbnails?.default?.url || user}
           className="w-12 h-12 rounded-full"
           alt=""
         />
-        <div>
+        <div className="flex-col">
           <p>{videoData?.snippet?.channelTitle || "Channel Name"}</p>
           <p>{value_count(channelData?.statistics?.subscriberCount || 0)} Subscribers</p>
-        </div>
+          </div>
+       </div>
         <button className="bg-red-600 text-white px-4 py-2 rounded">Subscribe</button>
       </div>
 

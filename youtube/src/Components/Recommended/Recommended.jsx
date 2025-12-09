@@ -3,7 +3,7 @@ import { data } from '../../assets/assets'
 
 const Recommended = () => {
   return (
-    <div className='recommended-menu w-[400px] flex flex-col mt-25 gap-4'>
+    <div className='recommended-menu w-full mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md-grid-cols-4 gap-3'>
 
       {data.map((item, index) => {
         return (
